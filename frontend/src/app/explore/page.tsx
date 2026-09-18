@@ -7,6 +7,7 @@ import { BOTCOMPUTE_ABI, BOTCOMPUTE_CONTRACT_ADDRESS } from "@/lib/contract";
 import { ProviderCard } from "@/components/ProviderCard";
 import { RegisterProviderModal } from "@/components/RegisterProviderModal";
 import { ProviderData } from "@/lib/types";
+import { BackButton } from "@/components/BackButton";
 
 export default function ExplorePage() {
   const [selectedFilter, setSelectedFilter] = useState<string>("ALL");
@@ -87,13 +88,16 @@ export default function ExplorePage() {
           </p>
         </div>
 
-        <button
-          onClick={() => setIsRegisterOpen(true)}
-          className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-xs font-semibold transition-all"
-        >
-          <Plus className="w-3.5 h-3.5" />
-          <span>Register Node</span>
-        </button>
+        <div className="flex items-center gap-2">
+          <BackButton label="Back" fallbackHref="/" />
+          <button
+            onClick={() => setIsRegisterOpen(true)}
+            className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-xs font-semibold transition-all cursor-pointer"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>Register Node</span>
+          </button>
+        </div>
       </div>
 
       {/* Filter and Search Bar */}

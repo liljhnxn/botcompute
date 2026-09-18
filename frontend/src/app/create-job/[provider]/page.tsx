@@ -23,6 +23,7 @@ import {
 import { formatAddress } from "@/lib/identity";
 import { formatBOT, computeClientSha256, getExplorerTxUrl } from "@/lib/utils";
 import { ProviderData } from "@/lib/types";
+import { BackButton } from "@/components/BackButton";
 
 export default function CreateJobPage() {
   const params = useParams();
@@ -136,12 +137,7 @@ export default function CreateJobPage() {
             Deposit BOT into on-chain escrow to reserve and execute workloads on Botchain Testnet.
           </p>
         </div>
-        <Link
-          href="/explore"
-          className="text-xs text-slate-400 hover:text-white transition-colors"
-        >
-          ← Browse Providers
-        </Link>
+        <BackButton label="Back" fallbackHref="/explore" />
       </div>
 
       {isSuccess ? (

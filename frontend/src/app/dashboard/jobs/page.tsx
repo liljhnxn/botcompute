@@ -19,6 +19,7 @@ import { BOTCOMPUTE_ABI, BOTCOMPUTE_CONTRACT_ADDRESS } from "@/lib/contract";
 import { JobData, JobStatus } from "@/lib/types";
 import { formatAddress } from "@/lib/identity";
 import { formatBOT, formatDate, formatTimeRemaining } from "@/lib/utils";
+import { BackButton } from "@/components/BackButton";
 
 export default function CustomerJobsDashboard() {
   const { address, isConnected } = useAccount();
@@ -52,13 +53,16 @@ export default function CustomerJobsDashboard() {
           </p>
         </div>
 
-        <Link
-          href="/explore"
-          className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-black text-xs font-semibold shadow-sm transition-all"
-        >
-          <Plus className="w-3.5 h-3.5" />
-          <span>New Compute Job</span>
-        </Link>
+        <div className="flex items-center gap-2">
+          <BackButton label="Back" fallbackHref="/" />
+          <Link
+            href="/explore"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-black text-xs font-semibold shadow-sm transition-all"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>New Compute Job</span>
+          </Link>
+        </div>
       </div>
 
       {!isConnected ? (

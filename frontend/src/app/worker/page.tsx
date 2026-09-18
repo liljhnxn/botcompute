@@ -16,6 +16,7 @@ import {
   Hash,
 } from "lucide-react";
 import { computeClientSha256 } from "@/lib/utils";
+import { BackButton } from "@/components/BackButton";
 
 export default function WorkerDaemonPage() {
   const [workerEndpoint, setWorkerEndpoint] = useState("http://localhost:4000");
@@ -94,6 +95,10 @@ export default function WorkerDaemonPage() {
 
   return (
     <div className="space-y-8 max-w-5xl mx-auto">
+      <div>
+        <BackButton label="Back to Provider Dashboard" fallbackHref="/dashboard/provider" />
+      </div>
+
       {/* Header */}
       <div className="pb-4 border-b border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>

@@ -27,6 +27,7 @@ import { BOTCOMPUTE_ABI, BOTCOMPUTE_CONTRACT_ADDRESS } from "@/lib/contract";
 import { ProviderData, JobStatus, JobData } from "@/lib/types";
 import { formatBOT, formatDate, getExplorerTxUrl } from "@/lib/utils";
 import { RegisterProviderModal } from "@/components/RegisterProviderModal";
+import { BackButton } from "@/components/BackButton";
 
 export default function ProviderDashboardPage() {
   const { address, isConnected } = useAccount();
@@ -162,13 +163,16 @@ export default function ProviderDashboardPage() {
           </p>
         </div>
 
-        <Link
-          href="/worker"
-          className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-xs font-mono text-cyan-400"
-        >
-          <span>Worker Daemon Status</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </Link>
+        <div className="flex items-center gap-2">
+          <BackButton label="Back" fallbackHref="/" />
+          <Link
+            href="/worker"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-xs font-mono text-cyan-400"
+          >
+            <span>Worker Daemon Status</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
       </div>
 
       {!isConnected ? (

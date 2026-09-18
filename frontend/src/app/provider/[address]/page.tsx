@@ -23,6 +23,7 @@ import { BOTCOMPUTE_ABI, BOTCOMPUTE_CONTRACT_ADDRESS } from "@/lib/contract";
 import { formatAddress } from "@/lib/identity";
 import { formatBOT, formatDate, getExplorerAddressUrl } from "@/lib/utils";
 import { ProviderData } from "@/lib/types";
+import { BackButton } from "@/components/BackButton";
 
 export default function ProviderProfilePage() {
   const params = useParams();
@@ -84,7 +85,11 @@ export default function ProviderProfilePage() {
   }
 
   return (
-    <div className="space-y-8 max-w-5xl mx-auto">
+    <div className="space-y-6 max-w-5xl mx-auto">
+      <div>
+        <BackButton label="Back to Marketplace" fallbackHref="/explore" />
+      </div>
+
       {/* Top Banner & Action */}
       <div className="glass-panel rounded-2xl p-6 sm:p-8 border border-white/5 relative overflow-hidden">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">

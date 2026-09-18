@@ -38,6 +38,7 @@ import {
 } from "@/lib/utils";
 import { JobTimeline } from "@/components/JobTimeline";
 import { ResultVerifier } from "@/components/ResultVerifier";
+import { BackButton } from "@/components/BackButton";
 
 export default function JobDetailPage() {
   const params = useParams();
@@ -250,12 +251,7 @@ export default function JobDetailPage() {
         </div>
 
         <div className="flex items-center gap-2 text-xs">
-          <Link
-            href="/dashboard/jobs"
-            className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors"
-          >
-            ← My Jobs
-          </Link>
+          <BackButton label="Back" fallbackHref="/dashboard/jobs" />
           <Link
             href="/dashboard/provider"
             className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors"
