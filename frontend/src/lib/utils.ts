@@ -1,6 +1,6 @@
 import { formatEther, parseEther } from "viem";
 
-const EXPLORER_BASE = process.env.NEXT_PUBLIC_BOTCHAIN_EXPLORER_URL || "https://scan.bohr.life";
+const EXPLORER_BASE = process.env.NEXT_PUBLIC_BOTCHAIN_EXPLORER_URL || "https://scan.botchain.ai";
 
 export function formatBOT(wei?: bigint | string | number): string {
   if (wei === undefined || wei === null) return "0.00";

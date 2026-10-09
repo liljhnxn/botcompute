@@ -200,7 +200,7 @@ export default function ProviderDashboardPage() {
             <h2 className="text-lg font-bold text-white">Register as a Compute Provider</h2>
             <p className="text-xs text-slate-400">
               Your connected wallet ({address?.substring(0, 8)}...) is not registered as a compute
-              provider on Botchain Testnet. Stake minimum collateral to start receiving workloads.
+              provider on BOT Chain Mainnet. Stake minimum collateral to start receiving workloads.
             </p>
           </div>
           <button

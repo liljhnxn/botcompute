@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 const PORT = parseInt(process.env.WORKER_PORT || "4000", 10);
-const RPC_URL = process.env.BOTCHAIN_RPC_URL || "https://rpc.bohr.life";
+const RPC_URL = process.env.BOTCHAIN_RPC_URL || "https://rpc.botchain.ai";
 const CONTRACT_ADDRESS = process.env.BOTCOMPUTE_CONTRACT_ADDRESS || "0x0000000000000000000000000000000000000000";
 const PROVIDER_ADDRESS = process.env.PROVIDER_ADDRESS || "0x0000000000000000000000000000000000000000";
 
@@ -54,8 +54,8 @@ app.get("/info", (_req: Request, res: Response) => {
     port: PORT,
     contractAddress: CONTRACT_ADDRESS,
     network: {
-      name: "Botchain Testnet",
-      chainId: 968,
+      name: "BOT Chain Mainnet",
+      chainId: 677,
       rpcUrl: RPC_URL,
     },
   };
@@ -134,7 +134,7 @@ app.post("/verify", (req: Request, res: Response) => {
 app.listen(PORT, () => {
   console.log("==================================================");
   console.log(`🤖 BotCompute Worker daemon running on port ${PORT}`);
-  console.log(`🔗 Botchain Testnet RPC: ${RPC_URL} (Chain ID: 968)`);
+  console.log(`🔗 BOT Chain Mainnet RPC: ${RPC_URL} (Chain ID: 677)`);
   console.log(`📜 Contract Target:     ${CONTRACT_ADDRESS}`);
   console.log(`🛡️  Security Sandbox:    Predefined Workloads Only (No arbitrary shell execution)`);
   console.log("==================================================");

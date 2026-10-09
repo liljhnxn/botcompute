@@ -103,7 +103,7 @@ export function RegisterProviderModal({
                 rel="noreferrer"
                 className="inline-block text-xs font-mono text-cyan-400 hover:underline pt-2"
               >
-                View Transaction on BohrScan →
+                View Transaction on BotScan →
               </a>
             )}
             <div className="pt-4">

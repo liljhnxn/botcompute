@@ -55,7 +55,7 @@ export default function ProviderProfilePage() {
       <div className="py-24 text-center space-y-3">
         <Loader2 className="w-8 h-8 text-cyan-400 animate-spin mx-auto" />
         <p className="text-xs text-slate-400 font-mono">
-          Loading provider profile from Botchain Testnet...
+          Loading provider profile from BOT Chain Mainnet...
         </p>
       </div>
     );
@@ -69,7 +69,7 @@ export default function ProviderProfilePage() {
         </div>
         <h2 className="text-lg font-bold text-white">Provider Not Found</h2>
         <p className="text-xs text-slate-400">
-          No active compute provider is registered on Botchain Testnet at address{" "}
+          No active compute provider is registered on BOT Chain Mainnet at address{" "}
           <span className="font-mono text-cyan-400">{providerAddress}</span>.
         </p>
         <div className="pt-2">

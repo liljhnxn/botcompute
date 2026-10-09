@@ -7,7 +7,7 @@
 - **Title**: BotCompute Protocol
 - **Subtitle**: Trustless Compute Marketplace & Escrow Protocol
 - **Tagline**: *"Rent compute. Provide compute. Earn on-chain."*
-- **Network**: Botchain Testnet (Chain ID: 968 | Native Currency: BOT)
+- **Network**: BOT Chain Mainnet (Chain ID: 677 | Native Currency: BOT)
 - **Repo**: [github.com/liljhnxn/botcompute](https://github.com/liljhnxn/botcompute)
 
 ---
@@ -65,7 +65,7 @@
 ---
 
 ## Slide 7: Tokenomics & Business Model
-- **Native Currency**: BOT (Botchain Testnet).
+- **Native Currency**: BOT (BOT Chain Mainnet).
 - **Protocol Revenue**: 2.5% protocol fee on every successfully settled compute job routed to the Treasury.
 - **Provider Incentives**: 97.5% direct compensation, instant pull-payment claims.
 - **Collateral Sink**: Staked BOT locks supply as more providers join the network.
@@ -80,15 +80,15 @@
 ---
 
 ## Slide 9: Roadmap
-- **Q4 2026 (Live)**: Botchain Testnet contract, worker daemon MVP, Next.js 14 frontend, 24-test suite.
+- **Q4 2026 (Live)**: BOT Chain Mainnet contract, worker daemon MVP, Next.js 14 frontend, 24-test suite.
 - **Q1 2027**: Dockerized container isolation, cgroup resource quotas, GPU (CUDA) hardware support.
 - **Q2 2027**: BotNS (`.bot`) naming integration, multi-worker proof-of-compute quorum verification.
-- **Q3 2027**: Botchain Mainnet deployment and autonomous AI agent compute integration.
+- **Q3 2027**: Cross-chain compute bridges and autonomous AI agent compute integration.
 
 ---
 
 ## Slide 10: Team & Links
 - **Repository**: [github.com/liljhnxn/botcompute](https://github.com/liljhnxn/botcompute)
 - **Whitepaper**: [WHITEPAPER.md](https://github.com/liljhnxn/botcompute/blob/main/WHITEPAPER.md)
-- **Explorer**: BohrScan (Botchain Testnet - Chain ID 968)
+- **Explorer**: BotScan (BOT Chain Mainnet - Chain ID 677)
 - **Contact**: BotCompute Protocol Team

@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "BotCompute — Rent compute. Provide compute. Earn on-chain.",
   description:
-    "Decentralized compute marketplace and trustless escrow protocol on Botchain Testnet (Chain ID 968). Rent CPU/GPU compute, provide compute, and earn native BOT.",
+    "Decentralized compute marketplace and trustless escrow protocol on BOT Chain Mainnet (Chain ID 677). Rent CPU/GPU compute, provide compute, and earn native BOT.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

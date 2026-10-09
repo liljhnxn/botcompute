@@ -2,10 +2,13 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Cpu, Server, Layers, Terminal, Menu, X, ShieldCheck } from "lucide-react";
+import { Cpu, Server, Layers, Terminal, Menu, X, ShieldCheck, ExternalLink } from "lucide-react";
 import { NetworkBadge } from "./NetworkBadge";
 import { WalletButton } from "./WalletButton";
+import { BOTCOMPUTE_CONTRACT_ADDRESS } from "@/lib/contract";
+import { getExplorerAddressUrl } from "@/lib/utils";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -73,7 +76,24 @@ export function Navbar() {
           </nav>
 
           {/* Right Action Items */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2.5">
+            <a
+              href={getExplorerAddressUrl(BOTCOMPUTE_CONTRACT_ADDRESS)}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs text-slate-300 hover:text-emerald-400 hover:border-emerald-500/40 transition-all font-mono group shadow-sm"
+              title="View BotCompute Contract on BotScan Mainnet Explorer"
+            >
+              <Image
+                src="/botchain-logo.png"
+                alt="BOT Chain Logo"
+                width={14}
+                height={14}
+                className="w-3.5 h-3.5 object-contain group-hover:scale-110 transition-transform"
+              />
+              <span>Explorer</span>
+              <ExternalLink className="w-3 h-3 text-slate-500 group-hover:text-emerald-400" />
+            </a>
             <NetworkBadge />
             <WalletButton />
           </div>
@@ -96,6 +116,22 @@ export function Navbar() {
         <div className="md:hidden border-b border-slate-800 bg-[#090d16] px-4 pt-2 pb-4 space-y-1">
           <div className="py-2 mb-2 border-b border-slate-800/60 flex justify-between items-center">
             <NetworkBadge />
+            <a
+              href={getExplorerAddressUrl(BOTCOMPUTE_CONTRACT_ADDRESS)}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300 hover:text-emerald-400 font-mono"
+            >
+              <Image
+                src="/botchain-logo.png"
+                alt="BOT Chain Logo"
+                width={14}
+                height={14}
+                className="w-3.5 h-3.5 object-contain"
+              />
+              <span>BotScan</span>
+              <ExternalLink className="w-3 h-3 text-emerald-400" />
+            </a>
           </div>
           {navLinks.map((link) => {
             const Icon = link.icon;

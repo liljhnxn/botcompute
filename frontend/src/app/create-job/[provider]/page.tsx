@@ -134,7 +134,7 @@ export default function CreateJobPage() {
             Create Compute Escrow Job
           </h1>
           <p className="text-xs text-slate-400 mt-1">
-            Deposit BOT into on-chain escrow to reserve and execute workloads on Botchain Testnet.
+            Deposit BOT into on-chain escrow to reserve and execute workloads on BOT Chain Mainnet.
           </p>
         </div>
         <BackButton label="Back" fallbackHref="/explore" />

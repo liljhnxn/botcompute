@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 /**
  * @title BotCompute
  * @author BotCompute Protocol
- * @notice Decentralized compute marketplace and escrow protocol running on Botchain Testnet (Chain ID 968).
+ * @notice Decentralized compute marketplace and escrow protocol running on BOT Chain Mainnet (Chain ID 677).
  * Facilitates provider registration, staking, job escrow agreements, off-chain workload result tracking,
  * pull-payment settlements, and arbitration.
  *

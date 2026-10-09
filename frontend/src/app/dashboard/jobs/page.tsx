@@ -79,7 +79,7 @@ export default function CustomerJobsDashboard() {
         <div className="py-24 text-center space-y-3">
           <Loader2 className="w-8 h-8 text-cyan-400 animate-spin mx-auto" />
           <p className="text-xs text-slate-400 font-mono">
-            Fetching customer escrow jobs from Botchain Testnet...
+            Fetching customer escrow jobs from BOT Chain Mainnet...
           </p>
         </div>
       ) : jobIds.length === 0 ? (

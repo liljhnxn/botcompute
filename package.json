@@ -1,13 +1,13 @@
 {
   "name": "botcompute",
   "version": "1.0.0",
-  "description": "BotCompute - Decentralized compute marketplace and escrow protocol running on Botchain Testnet",
+  "description": "BotCompute - Decentralized compute marketplace and escrow protocol running on BOT Chain Mainnet",
   "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy:botchain": "hardhat run scripts/deploy.ts --network botchainTestnet",
-    "seed:botchain": "hardhat run scripts/seed.ts --network botchainTestnet",
+    "deploy:botchain": "hardhat run scripts/deploy.ts --network botchainMainnet",
+    "seed:botchain": "hardhat run scripts/seed.ts --network botchainMainnet",
     "worker": "npm run --prefix worker start",
     "worker:dev": "npm run --prefix worker dev",
     "frontend:dev": "npm run --prefix frontend dev",

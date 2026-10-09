@@ -90,7 +90,7 @@ export default function JobDetailPage() {
       <div className="py-24 text-center space-y-3">
         <Loader2 className="w-8 h-8 text-cyan-400 animate-spin mx-auto" />
         <p className="text-xs text-slate-400 font-mono">
-          Loading job escrow details from Botchain Testnet...
+          Loading job escrow details from BOT Chain Mainnet...
         </p>
       </div>
     );
@@ -246,7 +246,7 @@ export default function JobDetailPage() {
             </span>
           </div>
           <p className="text-xs text-slate-400">
-            Escrow Agreement on Botchain Testnet (Chain ID 968)
+            Escrow Agreement on BOT Chain Mainnet (Chain ID 677)
           </p>
         </div>
 
@@ -291,7 +291,7 @@ export default function JobDetailPage() {
             rel="noreferrer"
             className="font-mono text-cyan-400 hover:underline flex items-center gap-1"
           >
-            <span>View on BohrScan</span>
+            <span>View on BotScan</span>
             <ExternalLink className="w-3 h-3" />
           </a>
         </div>
@@ -523,7 +523,7 @@ export default function JobDetailPage() {
             </h3>
             <p className="text-xs text-slate-400">
               Provide the raw computation output. A deterministic SHA-256 hash will be generated
-              and anchored to Job #{job.id.toString()} on Botchain Testnet.
+              and anchored to Job #{job.id.toString()} on BOT Chain Mainnet.
             </p>
 
             <form onSubmit={handleSubmitResult} className="space-y-4">

@@ -1,6 +1,6 @@
 # BotCompute Protocol: Decentralized Compute Marketplace & Escrow Protocol
 **Technical Whitepaper v1.0**  
-**Network**: Botchain Testnet (Chain ID: 968) | Native Asset: BOT  
+**Network**: BOT Chain Mainnet (Chain ID: 677) | Native Asset: BOT  
 **Repository**: [github.com/liljhnxn/botcompute](https://github.com/liljhnxn/botcompute)  
 **Authors**: BotCompute Core Contributors  
 **Date**: October 2026  
@@ -11,7 +11,7 @@
 
 The exponential surge in artificial intelligence, cryptographic proof generation, and data-intensive pipelines has exposed structural limitations in centralized cloud infrastructure: vendor lock-in, opaque pricing tiers, unpredictable billings, and counterparty delivery risk.
 
-**BotCompute** is an open, trustless compute marketplace and decentralized escrow protocol engineered for the **Botchain Testnet (Chain ID 968)**. The protocol pairs users requiring computation (**Customers**) with hardware operators (**Providers**), governing the entire relationship through an immutable, non-custodial smart contract escrow (`BotCompute.sol`) coupled with an off-chain sandboxed compute daemon (**BotCompute Worker**).
+**BotCompute** is an open, trustless compute marketplace and decentralized escrow protocol engineered for the **BOT Chain Mainnet (Chain ID 677)**. The protocol pairs users requiring computation (**Customers**) with hardware operators (**Providers**), governing the entire relationship through an immutable, non-custodial smart contract escrow (`BotCompute.sol`) coupled with an off-chain sandboxed compute daemon (**BotCompute Worker**).
 
 By strictly separating financial settlement and cryptographic state anchoring (on-chain) from compute workload execution (off-chain), BotCompute delivers microsecond-auditable job lifecycles, zero custodial exposure, pull-payment security against reentrancy, and automated stake-locking guarantees against provider non-delivery.
 
@@ -39,7 +39,7 @@ BotCompute resolves these challenges through a **Dual-Layer Architecture**:
                          1. createJob() (Deposit BOT)
                                      v
 +------------------------------------+------------------------------------+
-|               BOTCHAIN LAYER: BotCompute.sol (Chain ID 968)             |
+|               BOTCHAIN LAYER: BotCompute.sol (Chain ID 677)             |
 |  - Non-Custodial Escrow Vault     - Provider Registry & Collateral      |
 |  - 7-Stage State Machine          - Pull-Payment Accounting             |
 |  - Cryptographic Result Anchors   - Arbitration Engine                  |
@@ -104,7 +104,7 @@ The protocol uses the native **BOT** asset of Botchain (18 decimals):
 
 ## 5. Roadmap
 
-- **Phase 1 (Current - MVP)**: Botchain Testnet deployment, single-node worker daemon, deterministic sandbox, Next.js Web3 explorer & dashboard.
+- **Phase 1 (Current - Live)**: BOT Chain Mainnet deployment, single-node worker daemon, deterministic sandbox, Next.js Web3 explorer & dashboard.
 - **Phase 2 (Q1 2027)**: Dockerized container worker sandboxing, resource caps (cgroups/RAM), GPU acceleration (NVIDIA CUDA benchmark integration).
 - **Phase 3 (Q2 2027)**: BotNS (`.bot`) decentralized name routing, multi-node redundant quorum verification (Proof-of-Compute), on-chain reputation engine.
-- **Phase 4 (Q3 2027)**: Botchain Mainnet rollout, cross-chain payment bridges, autonomous AI agent compute procurement.
+- **Phase 4 (Q3 2027)**: Cross-chain compute bridges, autonomous AI agent compute procurement.

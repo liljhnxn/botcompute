@@ -22,7 +22,7 @@ async function main() {
   console.log(`Network Chain ID: ${chainId}`);
 
   // Configuration parameters
-  const minStake = ethers.parseEther("0.01"); // 0.01 BOT minimum stake
+  const minStake = ethers.parseEther("0.001"); // 0.001 BOT minimum stake for affordable provider registration
   const protocolFeeBps = 250; // 2.5% protocol fee
   const arbitrator = deployer.address;
   const treasury = deployer.address;
@@ -44,13 +44,14 @@ async function main() {
 
   await botCompute.waitForDeployment();
   const contractAddress = await botCompute.getAddress();
+  const explorerBaseUrl = process.env.NEXT_PUBLIC_BOTCHAIN_EXPLORER_URL || "https://scan.botchain.ai";
 
   console.log("\n==========================================");
   console.log("DEPLOYMENT SUCCESSFUL!");
   console.log("==========================================");
   console.log(`Contract Address: ${contractAddress}`);
   console.log(`Chain ID:         ${chainId}`);
-  console.log(`Explorer URL:     https://scan.bohr.life/address/${contractAddress}`);
+  console.log(`Explorer URL:     ${explorerBaseUrl}/address/${contractAddress}`);
 
   // Save deployment artifact information
   const deploymentInfo = {
@@ -62,7 +63,7 @@ async function main() {
     protocolFeeBps,
     arbitrator,
     treasury,
-    explorerUrl: `https://scan.bohr.life/address/${contractAddress}`,
+    explorerUrl: `${explorerBaseUrl}/address/${contractAddress}`,
     deployedAt: new Date().toISOString(),
   };
 

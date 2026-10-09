@@ -2,7 +2,7 @@
 
 > *"Rent compute. Provide compute. Earn on-chain."*
 
-**BotCompute** is a decentralized compute marketplace and escrow protocol running on **Botchain Testnet (Chain ID 968, native currency BOT)**. It creates a trustless bridge between users needing computational resources (Customers) and machine operators with available hardware (Providers).
+**BotCompute** is a decentralized compute marketplace and escrow protocol running on **BOT Chain Mainnet (Chain ID 677, native currency BOT)**. It creates a trustless bridge between users needing computational resources (Customers) and machine operators with available hardware (Providers).
 
 ---
 
@@ -14,7 +14,7 @@ The protocol cleanly separates **financial escrow & state validation (on-chain)*
 sequenceDiagram
     autonumber
     actor Customer
-    participant Contract as BotCompute.sol (Botchain 968)
+    participant Contract as BotCompute.sol (BOT Chain 677)
     actor Provider
     participant Worker as BotCompute Worker Daemon
 
@@ -70,7 +70,7 @@ Work 11/
 ├── test/
 │   └── BotCompute.test.ts     # 24 comprehensive Hardhat unit tests
 ├── scripts/
-│   └── deploy.ts              # Botchain Testnet deployment script
+│   └── deploy.ts              # BOT Chain Mainnet deployment script
 ├── worker/                    # Off-chain Node.js compute daemon
 │   ├── src/
 │   │   ├── index.ts           # Express REST API (health, info, execute, verify)
@@ -93,15 +93,15 @@ Work 11/
 
 ---
 
-## 🌐 Network Details (Botchain / Bohr Testnet)
+## 🌐 Network Details (BOT Chain Mainnet)
 
 | Parameter | Value |
 | :--- | :--- |
-| **Network Name** | Botchain Testnet (Bohr Testnet) |
-| **Chain ID** | `968` |
+| **Network Name** | BOT Chain Mainnet |
+| **Chain ID** | `677` |
 | **Native Currency** | `BOT` (18 decimals) |
-| **RPC Endpoint** | `https://rpc.bohr.life` |
-| **Block Explorer** | `https://scan.bohr.life` |
+| **RPC Endpoint** | `https://rpc.botchain.ai` |
+| **Block Explorer** | `https://scan.botchain.ai` |
 
 ---
 
@@ -129,17 +129,17 @@ npm run compile
 npm run test
 ```
 
-### 3. Deploy to Botchain Testnet (Optional)
-To deploy to live Botchain Testnet, ensure your `.env` contains a private key funded with testnet BOT:
+### 3. Deploy to BOT Chain Mainnet (Optional)
+To deploy to live BOT Chain Mainnet, ensure your `.env` contains a private key funded with BOT:
 ```env
 PRIVATE_KEY=your_private_key_here
-BOTCHAIN_RPC_URL=https://rpc.bohr.life
+BOTCHAIN_RPC_URL=https://rpc.botchain.ai
 ```
 Then run:
 ```bash
 npm run deploy:botchain
 ```
-*The script deploys `BotCompute.sol`, logs the contract address and BohrScan explorer link, and automatically syncs the address and ABI to `frontend/src/lib/contractData.json`.*
+*The script deploys `BotCompute.sol`, logs the contract address and BotScan explorer link, and automatically syncs the address and ABI to `frontend/src/lib/contractData.json`.*
 
 ---
 
@@ -205,4 +205,4 @@ npm run dev
 ---
 
 ## 📜 License
-MIT License. Built for the Botchain Testnet ecosystem.
+MIT License. Built for the BOT Chain ecosystem.

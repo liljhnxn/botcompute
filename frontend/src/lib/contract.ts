@@ -3,7 +3,7 @@ import contractData from "./contractData.json";
 export const BOTCOMPUTE_ABI = contractData.abi as unknown as readonly any[];
 
 export const BOTCHAIN_CHAIN_ID = parseInt(
-  process.env.NEXT_PUBLIC_BOTCHAIN_CHAIN_ID || "968",
+  process.env.NEXT_PUBLIC_BOTCHAIN_CHAIN_ID || "677",
   10
 );
 

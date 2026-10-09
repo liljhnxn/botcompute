@@ -1,0 +1,12 @@
+{
+  "contractAddress": "0xB8D1c1b2d783d87B965C02a187b6AeF5D802030B",
+  "chainId": 677,
+  "network": "botchainMainnet",
+  "deployer": "0x83acc57bb9CDe889b248E9c740F5248637cd89f4",
+  "minStake": "1000000000000000",
+  "protocolFeeBps": 250,
+  "arbitrator": "0x83acc57bb9CDe889b248E9c740F5248637cd89f4",
+  "treasury": "0x83acc57bb9CDe889b248E9c740F5248637cd89f4",
+  "explorerUrl": "https://scan.botchain.ai/address/0xB8D1c1b2d783d87B965C02a187b6AeF5D802030B",
+  "deployedAt": "2026-10-09T16:41:48.530Z"
+}

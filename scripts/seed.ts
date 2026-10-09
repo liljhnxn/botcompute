@@ -48,13 +48,13 @@ async function main() {
   );
 
   console.log(`Transaction sent: ${tx.hash}`);
-  console.log("Waiting for block confirmation on Botchain Testnet...");
+  console.log("Waiting for block confirmation on BOT Chain Mainnet...");
   const receipt = await tx.wait();
 
   console.log("==========================================");
   console.log("DEMO PROVIDER SEEDED SUCCESSFULLY!");
   console.log("==========================================");
-  console.log(`Explorer Link: https://scan.bohr.life/tx/${tx.hash}`);
+  console.log(`Explorer Link: https://scan.botchain.ai/tx/${tx.hash}`);
   console.log(`Provider Address: ${deployer.address}`);
   console.log("You can now view this provider on http://localhost:3000/explore !");
 }

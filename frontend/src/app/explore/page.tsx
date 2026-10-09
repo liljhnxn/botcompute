@@ -161,13 +161,13 @@ export default function ExplorePage() {
         <div className="py-24 text-center space-y-3">
           <Loader2 className="w-8 h-8 text-cyan-400 animate-spin mx-auto" />
           <p className="text-xs text-slate-400 font-mono">
-            Querying provider registry from BotCompute.sol on Botchain Testnet...
+            Querying provider registry from BotCompute.sol on BOT Chain Mainnet...
           </p>
         </div>
       ) : isError ? (
         <div className="p-6 rounded-xl bg-rose-500/10 border border-rose-500/30 text-center space-y-2">
           <p className="text-sm font-semibold text-rose-400">
-            Unable to fetch providers from Botchain Testnet.
+            Unable to fetch providers from BOT Chain Mainnet.
           </p>
           <p className="text-xs text-slate-400">
             Please ensure your RPC connection is reachable or configure a deployed contract address.
@@ -189,7 +189,7 @@ export default function ExplorePage() {
             <p className="text-xs text-slate-400 max-w-sm mx-auto">
               {searchQuery || selectedFilter !== "ALL"
                 ? "No providers matched your current search and filter criteria."
-                : "No compute providers registered yet on Botchain Testnet. Be the first to register your node and start earning BOT!"}
+                : "No compute providers registered yet on BOT Chain Mainnet. Be the first to register your node and start earning BOT!"}
             </p>
           </div>
           <button
